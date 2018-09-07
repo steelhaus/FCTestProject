@@ -1,5 +1,5 @@
 //
-//  FCTAuthViewController.h
+//  FCTPhotosFeedPageViewController.h
 //  FunCorpAnatolyTestProject
 //
 //  Created by Anatoly on 07/09/2018.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <VKSdk.h>
+#import "FCTPhotosFeedRootView.h"
 
-@interface FCTAuthViewController : UIViewController <VKSdkUIDelegate>
+@interface FCTPhotosFeedPageViewController : UIPageViewController
 
 @end

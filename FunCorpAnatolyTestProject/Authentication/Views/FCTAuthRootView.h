@@ -10,4 +10,7 @@
 
 @interface FCTAuthRootView : UIView
 
+@property (strong, nonatomic) UIButton *vkAuthButton;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
+
 @end

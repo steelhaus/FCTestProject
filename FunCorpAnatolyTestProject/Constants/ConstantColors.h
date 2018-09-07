@@ -17,5 +17,7 @@
 #define ConstantColors_h
 
 #define kColorVkBackground [UIColor colorWithRed:71.0/255.0 green:114.0/255.0 blue:173.0/255.0 alpha:1.0]
+#define kColorLightGray [UIColor colorWithRed:160.0/255.0 green:160.0/255.0 blue:160.0/255.0 alpha:1.0]
+#define kColorWhite UIColor.whiteColor
 
 #endif

@@ -22,10 +22,8 @@
     
     dispatch_once(&singletonInit, ^{
         sharedInstance = [[self alloc] init];
-//        [[VKSdk initializeWithAppId:VK_APP_KEY] registerDelegate:sharedInstance];
         VKSdk *sdkInstance = [VKSdk initializeWithAppId:VK_APP_KEY];
         [sdkInstance registerDelegate:sharedInstance];
-        [sdkInstance setUiDelegate:sharedInstance];
     });
     
     return sharedInstance;
@@ -46,7 +44,7 @@
 }
 
 - (void)authWithCallbackBlock:(dispatch_block_t)callback {
-    if ([VKSdk isLoggedIn]) {
+    if ([self isLoggedIn]) {
         dispatch_async(dispatch_get_main_queue(), callback);
     } else {
         self.authCompletionBlock = callback;
@@ -55,11 +53,20 @@
     }
 }
 
+- (BOOL)isLoggedIn {
+    return [VKSdk isLoggedIn];
+}
+
+- (void)setVkUiDelegate:(id<VKSdkUIDelegate>)delegate {
+    [[VKSdk instance] setUiDelegate:delegate];
+}
+
+//MARK: Delegate
 - (void)vkSdkAccessAuthorizationFinishedWithResult:(VKAuthorizationResult *)result {
     if (result.token){
-//        NSLog(@"Auth Success");
+        NSLog(@"Auth Success");
     } else {
-//        NSLog(@"Auth not success");
+        NSLog(@"Auth not success");
     }
     if (self.authCompletionBlock){
         dispatch_async(dispatch_get_main_queue(), self.authCompletionBlock);
@@ -72,17 +79,6 @@
         dispatch_async(dispatch_get_main_queue(), self.authCompletionBlock);
     }
 }
-
-- (void)vkSdkShouldPresentViewController:(UIViewController *)controller {
-    [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:controller animated:YES completion:nil];
-}
-
-- (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError {
-    VKCaptchaViewController *vc = [VKCaptchaViewController captchaControllerWithError:captchaError];
-    UIViewController *presenterVc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-    [vc presentIn:presenterVc];
-}
-
 
 + (NSArray *) vkPermissionsList {
     return @[VK_PHOTOS_PERMISSION_KEY];

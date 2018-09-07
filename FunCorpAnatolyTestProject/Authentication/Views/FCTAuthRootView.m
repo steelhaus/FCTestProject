@@ -14,7 +14,6 @@
 
 @property (strong, nonatomic) UIView *vkInfoContainerView;
 @property (strong, nonatomic) UIImageView *vkLogoImageView;
-@property (strong, nonatomic) UIButton *vkAuthButton;
 
 @end
 
@@ -22,6 +21,13 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     FCTAuthRootView *instance = [super initWithFrame:frame];
+    [instance constraintSubviews];
+    
+    return instance;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    FCTAuthRootView *instance = [super initWithCoder:aDecoder];
     [instance constraintSubviews];
     
     return instance;
@@ -51,14 +57,24 @@
     self.vkAuthButton = [UIButton new];
     self.vkAuthButton.layer.cornerRadius = 8;
     self.vkAuthButton.backgroundColor = kColorVkBackground;
-    [self.vkAuthButton setTitle:@"Auth" forState:UIControlStateNormal];
-    [self.vkAuthButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [self.vkAuthButton setTitle:NSLocalizedString(@"authorization_button_title", nil) forState:UIControlStateNormal];
+    [self.vkAuthButton setTitleColor:kColorLightGray forState:UIControlStateDisabled];
+    [self.vkAuthButton setTitleColor:kColorWhite forState:UIControlStateNormal];
     [self.vkInfoContainerView addSubview:self.vkAuthButton];
     [self.vkAuthButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.vkLogoImageView.mas_bottom).offset(16);
+        make.top.equalTo(self.vkLogoImageView.mas_bottom).offset(32);
         make.width.equalTo(@220);
         make.height.equalTo(@44);
         make.left.right.bottom.equalTo(self.vkInfoContainerView);
+    }];
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator.hidesWhenStopped = YES;
+    [self.activityIndicator stopAnimating];
+    [self addSubview:self.activityIndicator];
+    [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.vkInfoContainerView.mas_bottom).offset(16);
+        make.centerX.equalTo(self);
     }];
     
 }

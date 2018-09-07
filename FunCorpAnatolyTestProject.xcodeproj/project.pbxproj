@@ -18,7 +18,10 @@
 		D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5112B214288E4004D4B3C /* FCTNavigationController.m */; };
 		D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E51130214289B8004D4B3C /* FCTAuthViewController.m */; };
 		D8E51135214289EA004D4B3C /* FCTAuthRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E51134214289EA004D4B3C /* FCTAuthRootView.m */; };
-		D8E511392142A7BE004D4B3C /* ConstantColors.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E511382142A7BE004D4B3C /* ConstantColors.m */; };
+		D8E5113F2142AAB0004D4B3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8E511412142AAB0004D4B3C /* Localizable.strings */; };
+		D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E511452142ACC7004D4B3C /* FCTAuthenticationModel.m */; };
+		D8E5114B2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */; };
+		D8E511502142C379004D4B3C /* FCTPhotosFeedRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +50,17 @@
 		D8E51133214289EA004D4B3C /* FCTAuthRootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAuthRootView.h; sourceTree = "<group>"; };
 		D8E51134214289EA004D4B3C /* FCTAuthRootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTAuthRootView.m; sourceTree = "<group>"; };
 		D8E511372142A69E004D4B3C /* ConstantColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantColors.h; sourceTree = "<group>"; };
-		D8E511382142A7BE004D4B3C /* ConstantColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstantColors.m; sourceTree = "<group>"; };
+		D8E5113D2142AA8C004D4B3C /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Main.strings"; sourceTree = "<group>"; };
+		D8E5113E2142AA8C004D4B3C /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D8E511402142AAB0004D4B3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8E511422142AACB004D4B3C /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D8E511442142ACC7004D4B3C /* FCTAuthenticationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAuthenticationModel.h; sourceTree = "<group>"; };
+		D8E511452142ACC7004D4B3C /* FCTAuthenticationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTAuthenticationModel.m; sourceTree = "<group>"; };
+		D8E511472142BE19004D4B3C /* FCTAuthenticationState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAuthenticationState.h; sourceTree = "<group>"; };
+		D8E511492142C2DE004D4B3C /* FCTPhotosFeedPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedPageViewController.h; sourceTree = "<group>"; };
+		D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedPageViewController.m; sourceTree = "<group>"; };
+		D8E5114E2142C379004D4B3C /* FCTPhotosFeedRootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedRootView.h; sourceTree = "<group>"; };
+		D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedRootView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +105,7 @@
 		6E332E372141C02D00785178 /* FunCorpAnatolyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				D8E511482142C2A3004D4B3C /* PhotosFeed */,
 				D8E511362142A62B004D4B3C /* Constants */,
 				D8E5112D21428981004D4B3C /* Authentication */,
 				D8E51129214288B4004D4B3C /* Navigation */,
@@ -107,6 +121,7 @@
 				6E332E572141E00700785178 /* WeakStrongMacro.h */,
 				6E332E552141C51C00785178 /* AppKeys.h */,
 				6E332E472141C02D00785178 /* main.m */,
+				D8E5113A2142A9E6004D4B3C /* Source */,
 				6E332E412141C02D00785178 /* Assets.xcassets */,
 			);
 			path = FunCorpAnatolyTestProject;
@@ -141,6 +156,7 @@
 		D8E5112D21428981004D4B3C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D8E511432142AC9F004D4B3C /* Models */,
 				D8E51132214289D8004D4B3C /* Views */,
 				D8E5112E21428994004D4B3C /* Controller */,
 			);
@@ -169,9 +185,53 @@
 			isa = PBXGroup;
 			children = (
 				D8E511372142A69E004D4B3C /* ConstantColors.h */,
-				D8E511382142A7BE004D4B3C /* ConstantColors.m */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D8E5113A2142A9E6004D4B3C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D8E511412142AAB0004D4B3C /* Localizable.strings */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D8E511432142AC9F004D4B3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8E511442142ACC7004D4B3C /* FCTAuthenticationModel.h */,
+				D8E511452142ACC7004D4B3C /* FCTAuthenticationModel.m */,
+				D8E511472142BE19004D4B3C /* FCTAuthenticationState.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8E511482142C2A3004D4B3C /* PhotosFeed */ = {
+			isa = PBXGroup;
+			children = (
+				D8E5114D2142C35C004D4B3C /* Views */,
+				D8E5114C2142C349004D4B3C /* Controller */,
+			);
+			path = PhotosFeed;
+			sourceTree = "<group>";
+		};
+		D8E5114C2142C349004D4B3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8E511492142C2DE004D4B3C /* FCTPhotosFeedPageViewController.h */,
+				D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8E5114D2142C35C004D4B3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8E5114E2142C379004D4B3C /* FCTPhotosFeedRootView.h */,
+				D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ru-RU",
 			);
 			mainGroup = 6E332E2C2141C02D00785178;
 			productRefGroup = 6E332E362141C02D00785178 /* Products */;
@@ -235,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E332E452141C02D00785178 /* LaunchScreen.storyboard in Resources */,
+				D8E5113F2142AAB0004D4B3C /* Localizable.strings in Resources */,
 				6E332E422141C02D00785178 /* Assets.xcassets in Resources */,
 				6E332E402141C02D00785178 /* Main.storyboard in Resources */,
 			);
@@ -286,14 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E5114B2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m in Sources */,
+				D8E511502142C379004D4B3C /* FCTPhotosFeedRootView.m in Sources */,
 				D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */,
+				D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */,
 				6E332E3D2141C02D00785178 /* ViewController.m in Sources */,
 				D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */,
 				D8E51135214289EA004D4B3C /* FCTAuthRootView.m in Sources */,
 				6E332E542141C2F100785178 /* FCTVKDispatcher.m in Sources */,
 				6E332E482141C02D00785178 /* main.m in Sources */,
 				6E332E3A2141C02D00785178 /* AppDelegate.m in Sources */,
-				D8E511392142A7BE004D4B3C /* ConstantColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +368,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E332E3F2141C02D00785178 /* Base */,
+				D8E5113D2142AA8C004D4B3C /* ru-RU */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -312,8 +377,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E332E442141C02D00785178 /* Base */,
+				D8E5113E2142AA8C004D4B3C /* ru-RU */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D8E511412142AAB0004D4B3C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E511402142AAB0004D4B3C /* en */,
+				D8E511422142AACB004D4B3C /* ru-RU */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -323,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -378,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

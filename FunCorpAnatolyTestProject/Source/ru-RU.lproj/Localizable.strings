@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  FunCorpAnatolyTestProject
+
+  Created by Anatoly on 07/09/2018.
+  Copyright © 2018 steelhaus. All rights reserved.
+*/
+
+"authorization_button_title" = "Авторизоваться";
+"auth_screen_title" = "Авторизация";
+"unsuccess_auth_alert" = "Не удалось авторизоваться";
+"unsuccess_auth_alert_ok_action" = "Жаль";
