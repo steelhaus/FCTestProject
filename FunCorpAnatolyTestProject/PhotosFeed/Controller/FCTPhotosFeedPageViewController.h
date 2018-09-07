@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FCTPhotosFeedRootView.h"
+#import "FCTPhotosFeedItemRootView.h"
 
 @interface FCTPhotosFeedPageViewController : UIPageViewController
 

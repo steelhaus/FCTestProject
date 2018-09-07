@@ -10,6 +10,7 @@
 #import "ConstantColors.h"
 #import "FCTVKDispatcher.h"
 #import "FCTPhotosFeedPresenterModel.h"
+#import "FCTPhotosFeedItemViewController.h"
 
 @interface FCTPhotosFeedPageViewController ()
 
@@ -24,15 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kColorWhite;
+    self.feedModel = [[FCTPhotosFeedPresenterModel alloc] initWith:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     [self setupNavigationBar];
     
-    self.feedModel = [[FCTPhotosFeedPresenterModel alloc] init];
-    self.delegate = self.feedModel;
-    self.dataSource = self.feedModel;
+    
 }
 
 - (void)setupNavigationBar {

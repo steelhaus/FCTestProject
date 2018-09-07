@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCTPhotosFeedRootView : UIView
+@interface FCTPhotosFeedItemRootView : UIView
 
 @end

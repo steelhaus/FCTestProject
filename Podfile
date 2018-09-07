@@ -5,5 +5,5 @@ target 'FunCorpAnatolyTestProject' do
 
   pod "VK-ios-sdk"
   pod "Masonry"
-
+  pod "SDWebImage"
 end

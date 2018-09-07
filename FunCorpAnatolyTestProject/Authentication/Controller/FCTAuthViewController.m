@@ -72,7 +72,7 @@
 }
 
 - (void)moveToFeedVC {
-    FCTPhotosFeedPageViewController *feedVC = [[FCTPhotosFeedPageViewController alloc] init];
+    FCTPhotosFeedPageViewController *feedVC = [[FCTPhotosFeedPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self.navigationController pushViewController:feedVC animated:YES];
 }
 

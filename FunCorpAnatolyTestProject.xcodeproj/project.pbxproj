@@ -13,6 +13,11 @@
 		6E332E452141C02D00785178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E332E432141C02D00785178 /* LaunchScreen.storyboard */; };
 		6E332E482141C02D00785178 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E332E472141C02D00785178 /* main.m */; };
 		6E332E542141C2F100785178 /* FCTVKDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E332E532141C2F100785178 /* FCTVKDispatcher.m */; };
+		6E8EB5182142F6D3007DB203 /* FCTFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB5172142F6D3007DB203 /* FCTFeedService.m */; };
+		6E8EB51B21430696007DB203 /* FCTFeedable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB51A21430696007DB203 /* FCTFeedable.m */; };
+		6E8EB51E214306AE007DB203 /* FCTVkFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB51D214306AE007DB203 /* FCTVkFeed.m */; };
+		6E8EB521214306B9007DB203 /* FCTAdFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB520214306B9007DB203 /* FCTAdFeed.m */; };
+		6E8EB5242143191E007DB203 /* FCTFeedableLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB5232143191E007DB203 /* FCTFeedableLinkedList.m */; };
 		9D72B0D4FE3AABF9BD6C2DA9 /* libPods-FunCorpAnatolyTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BAEDFED032C5F12AE7B18D /* libPods-FunCorpAnatolyTestProject.a */; };
 		D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5112B214288E4004D4B3C /* FCTNavigationController.m */; };
 		D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E51130214289B8004D4B3C /* FCTAuthViewController.m */; };
@@ -20,7 +25,7 @@
 		D8E5113F2142AAB0004D4B3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8E511412142AAB0004D4B3C /* Localizable.strings */; };
 		D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E511452142ACC7004D4B3C /* FCTAuthenticationModel.m */; };
 		D8E5114B2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */; };
-		D8E511502142C379004D4B3C /* FCTPhotosFeedRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */; };
+		D8E511502142C379004D4B3C /* FCTPhotosFeedItemRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114F2142C379004D4B3C /* FCTPhotosFeedItemRootView.m */; };
 		D8E5115C2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5115B2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m */; };
 		D8E5115F2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5115E2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m */; };
 /* End PBXBuildFile section */
@@ -41,6 +46,16 @@
 		6E332E552141C51C00785178 /* AppKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppKeys.h; sourceTree = "<group>"; };
 		6E332E562141C5C200785178 /* FunCorpAnatolyTestProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunCorpAnatolyTestProject-Prefix.pch"; sourceTree = "<group>"; };
 		6E332E572141E00700785178 /* WeakStrongMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakStrongMacro.h; sourceTree = "<group>"; };
+		6E8EB5162142F6D3007DB203 /* FCTFeedService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTFeedService.h; sourceTree = "<group>"; };
+		6E8EB5172142F6D3007DB203 /* FCTFeedService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTFeedService.m; sourceTree = "<group>"; };
+		6E8EB51921430696007DB203 /* FCTFeedable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTFeedable.h; sourceTree = "<group>"; };
+		6E8EB51A21430696007DB203 /* FCTFeedable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTFeedable.m; sourceTree = "<group>"; };
+		6E8EB51C214306AE007DB203 /* FCTVkFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTVkFeed.h; sourceTree = "<group>"; };
+		6E8EB51D214306AE007DB203 /* FCTVkFeed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTVkFeed.m; sourceTree = "<group>"; };
+		6E8EB51F214306B9007DB203 /* FCTAdFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAdFeed.h; sourceTree = "<group>"; };
+		6E8EB520214306B9007DB203 /* FCTAdFeed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTAdFeed.m; sourceTree = "<group>"; };
+		6E8EB5222143191E007DB203 /* FCTFeedableLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTFeedableLinkedList.h; sourceTree = "<group>"; };
+		6E8EB5232143191E007DB203 /* FCTFeedableLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTFeedableLinkedList.m; sourceTree = "<group>"; };
 		C48B71149F9DE4B784BAD4C2 /* Pods-FunCorpAnatolyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunCorpAnatolyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		D54345C2D3D70D44E58D8F56 /* Pods-FunCorpAnatolyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunCorpAnatolyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E5112A214288E4004D4B3C /* FCTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTNavigationController.h; sourceTree = "<group>"; };
@@ -58,8 +73,8 @@
 		D8E511472142BE19004D4B3C /* FCTAuthenticationState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAuthenticationState.h; sourceTree = "<group>"; };
 		D8E511492142C2DE004D4B3C /* FCTPhotosFeedPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedPageViewController.h; sourceTree = "<group>"; };
 		D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedPageViewController.m; sourceTree = "<group>"; };
-		D8E5114E2142C379004D4B3C /* FCTPhotosFeedRootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedRootView.h; sourceTree = "<group>"; };
-		D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedRootView.m; sourceTree = "<group>"; };
+		D8E5114E2142C379004D4B3C /* FCTPhotosFeedItemRootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedItemRootView.h; sourceTree = "<group>"; };
+		D8E5114F2142C379004D4B3C /* FCTPhotosFeedItemRootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedItemRootView.m; sourceTree = "<group>"; };
 		D8E5115A2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedPresenterModel.h; sourceTree = "<group>"; };
 		D8E5115B2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedPresenterModel.m; sourceTree = "<group>"; };
 		D8E5115D2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedItemViewController.h; sourceTree = "<group>"; };
@@ -233,8 +248,8 @@
 		D8E5114D2142C35C004D4B3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D8E5114E2142C379004D4B3C /* FCTPhotosFeedRootView.h */,
-				D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */,
+				D8E5114E2142C379004D4B3C /* FCTPhotosFeedItemRootView.h */,
+				D8E5114F2142C379004D4B3C /* FCTPhotosFeedItemRootView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +259,16 @@
 			children = (
 				D8E5115A2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.h */,
 				D8E5115B2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m */,
+				6E8EB5162142F6D3007DB203 /* FCTFeedService.h */,
+				6E8EB5172142F6D3007DB203 /* FCTFeedService.m */,
+				6E8EB5222143191E007DB203 /* FCTFeedableLinkedList.h */,
+				6E8EB5232143191E007DB203 /* FCTFeedableLinkedList.m */,
+				6E8EB51921430696007DB203 /* FCTFeedable.h */,
+				6E8EB51A21430696007DB203 /* FCTFeedable.m */,
+				6E8EB51C214306AE007DB203 /* FCTVkFeed.h */,
+				6E8EB51D214306AE007DB203 /* FCTVkFeed.m */,
+				6E8EB51F214306B9007DB203 /* FCTAdFeed.h */,
+				6E8EB520214306B9007DB203 /* FCTAdFeed.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,17 +387,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E5114B2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m in Sources */,
-				D8E511502142C379004D4B3C /* FCTPhotosFeedRootView.m in Sources */,
+				D8E511502142C379004D4B3C /* FCTPhotosFeedItemRootView.m in Sources */,
 				D8E5115C2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m in Sources */,
 				D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */,
+				6E8EB51E214306AE007DB203 /* FCTVkFeed.m in Sources */,
 				D8E5115F2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m in Sources */,
 				D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */,
 				6E332E3D2141C02D00785178 /* ViewController.m in Sources */,
+				6E8EB5182142F6D3007DB203 /* FCTFeedService.m in Sources */,
 				D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */,
 				D8E51135214289EA004D4B3C /* FCTAuthRootView.m in Sources */,
 				6E332E542141C2F100785178 /* FCTVKDispatcher.m in Sources */,
+				6E8EB521214306B9007DB203 /* FCTAdFeed.m in Sources */,
+				6E8EB5242143191E007DB203 /* FCTFeedableLinkedList.m in Sources */,
 				6E332E482141C02D00785178 /* main.m in Sources */,
 				6E332E3A2141C02D00785178 /* AppDelegate.m in Sources */,
+				6E8EB51B21430696007DB203 /* FCTFeedable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

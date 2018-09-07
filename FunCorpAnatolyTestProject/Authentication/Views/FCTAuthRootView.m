@@ -20,17 +20,19 @@
 @implementation FCTAuthRootView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    FCTAuthRootView *instance = [super initWithFrame:frame];
-    [instance constraintSubviews];
-    
-    return instance;
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self constraintSubviews];
+    }
+    return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    FCTAuthRootView *instance = [super initWithCoder:aDecoder];
-    [instance constraintSubviews];
-    
-    return instance;
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self constraintSubviews];
+    }
+    return self;
 }
 
 - (void)constraintSubviews {

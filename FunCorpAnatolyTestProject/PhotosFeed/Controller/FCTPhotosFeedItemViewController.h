@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FCTFeedable.h"
 
 @interface FCTPhotosFeedItemViewController : UIViewController
+
+@property (strong, nonatomic) FCTFeedable *feed;
 
 @end

@@ -19,8 +19,11 @@
 @implementation FCTAuthenticationModel
 
 - (instancetype)initWith:(id<VKSdkUIDelegate>)controller {
-    self.authState = kFCTAuthenticationStateNonSuccess;
-    self.presentationController = controller;
+    self = [super init];
+    if (self) {
+        self.authState = kFCTAuthenticationStateNonSuccess;
+        self.presentationController = controller;
+    }
     return self;
 }
 

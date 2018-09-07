@@ -11,4 +11,8 @@
 
 @interface FCTPhotosFeedPresenterModel : NSObject <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
+@property (weak, nonatomic) UIPageViewController *pageViewController;
+
+- (instancetype)initWith:(UIPageViewController *)pageViewController;
+
 @end
