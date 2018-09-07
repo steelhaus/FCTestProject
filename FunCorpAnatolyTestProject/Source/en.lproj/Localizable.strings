@@ -10,3 +10,5 @@
 "auth_screen_title" = "Authorization";
 "unsuccess_auth_alert" = "Could not log in";
 "unsuccess_auth_alert_ok_action" = "Okay";
+"photos_feed_screen_title" = "Feed";
+"logout_button_title" = "Logout";

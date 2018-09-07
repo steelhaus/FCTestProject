@@ -61,6 +61,10 @@
     [[VKSdk instance] setUiDelegate:delegate];
 }
 
+- (void)logout {
+    [VKSdk forceLogout];
+}
+
 //MARK: Delegate
 - (void)vkSdkAccessAuthorizationFinishedWithResult:(VKAuthorizationResult *)result {
     if (result.token){

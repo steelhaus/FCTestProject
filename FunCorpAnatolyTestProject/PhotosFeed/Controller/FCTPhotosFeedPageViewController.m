@@ -8,6 +8,7 @@
 
 #import "FCTPhotosFeedPageViewController.h"
 #import "ConstantColors.h"
+#import "FCTVKDispatcher.h"
 
 @interface FCTPhotosFeedPageViewController ()
 
@@ -15,14 +16,32 @@
 
 @implementation FCTPhotosFeedPageViewController
 
+
+#pragma mark Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kColorWhite;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [self setupNavigationBar];
+}
+
+- (void)setupNavigationBar {
+    self.title = NSLocalizedString(@"photos_feed_screen_title", nil);
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"logout_button_title", nil) style:UIBarButtonItemStylePlain target:self action:@selector(handleLogoutButtonPressedWith:)];
+    self.navigationItem.leftBarButtonItem = logoutButton;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark Handlers
+- (void)handleLogoutButtonPressedWith:(UIBarButtonItem *)sender {
+    [[FCTVKDispatcher shared] logout];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

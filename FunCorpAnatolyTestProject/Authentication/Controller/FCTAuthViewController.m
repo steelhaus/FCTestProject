@@ -36,6 +36,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveAuthInfoDidChangeNotification:) name:kNotificationAuthInfoChangedName object:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    self.title = NSLocalizedString(@"auth_screen_title", nil);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

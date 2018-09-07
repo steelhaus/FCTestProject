@@ -21,4 +21,6 @@
 
 - (void)setVkUiDelegate:(id<VKSdkUIDelegate>)delegate;
 
+- (void)logout;
+
 @end
