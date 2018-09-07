@@ -38,7 +38,7 @@
 
 - (void)constraintSubviews {
     self.feedImageView = [[UIImageView alloc] init];
-    self.feedImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.feedImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.feedImageView.layer.masksToBounds = YES;
     [self.feedImageView setHidden:YES];
     [self addSubview: self.feedImageView];
@@ -53,7 +53,7 @@
         make.edges.equalTo(self);
     }];
     
-    self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.indicatorView.hidesWhenStopped = YES;
     [self.indicatorView stopAnimating];
     [self addSubview:self.indicatorView];

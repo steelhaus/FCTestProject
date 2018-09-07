@@ -10,6 +10,7 @@
 #define FCTAuthenticationState_h
 
 typedef NS_ENUM(NSUInteger, FCTAuthenticationState) {
+    kFCTAuthenticationNone,
     kFCTAuthenticationStateNonSuccess,
     kFCTAuthenticationStateSuccess,
     kFCTAuthenticationStateInProcess

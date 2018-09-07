@@ -21,6 +21,9 @@
 
 @implementation FCTAuthViewController
 
+dispatch_once_t attemptLogInOnAppear;
+
+#pragma mark Lifecycle
 - (void)loadView {
     FCTAuthRootView *controllerView = [[FCTAuthRootView alloc] init];
     controllerView.backgroundColor = kColorWhite;
@@ -39,6 +42,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     self.title = NSLocalizedString(@"auth_screen_title", nil);
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    dispatch_once(&attemptLogInOnAppear, ^{
+        [self.authModel tryToWakeUpVkSession];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +69,8 @@
         case kFCTAuthenticationStateInProcess:
             [self.mainView.activityIndicator startAnimating];
             break;
+        case kFCTAuthenticationNone:
+            [self.mainView.activityIndicator stopAnimating];
         default:
             break;
     }

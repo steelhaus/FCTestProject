@@ -23,7 +23,7 @@
 
 - (void)loadView {
     FCTPhotosFeedItemRootView *controllerView = [[FCTPhotosFeedItemRootView alloc] init];
-    controllerView.backgroundColor = kColorWhite;
+    controllerView.backgroundColor = kColorLightGray;
     self.mainView = controllerView;
     self.view = controllerView;
 }

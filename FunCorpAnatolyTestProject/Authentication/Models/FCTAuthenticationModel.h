@@ -20,4 +20,6 @@ static NSString* kNotificationAuthInfoChangedName = @"NSNotificationNameAuthInfo
 
 - (void)handleButtonAuthorizePressed:(id)sender;
 
+- (void)tryToWakeUpVkSession;
+
 @end

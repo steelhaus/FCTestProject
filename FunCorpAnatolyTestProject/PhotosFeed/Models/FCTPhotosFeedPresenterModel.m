@@ -77,6 +77,7 @@
 
 #pragma mark PageViewController Protocols
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    NSLog(@"DEBUG Get next VC");
     if ([viewController isKindOfClass:[FCTPhotosFeedItemViewController class]]) {
         FCTFeedable *currentFeed = ((FCTPhotosFeedItemViewController *)viewController).feed;
         if (currentFeed.nextFeed) {
@@ -97,6 +98,7 @@
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    NSLog(@"DEBUG Get prev VC");
     if ([viewController isKindOfClass:[FCTPhotosFeedItemViewController class]]) {
         FCTFeedable *currentFeed = ((FCTPhotosFeedItemViewController *)viewController).feed;
         if (currentFeed.prevFeed) {

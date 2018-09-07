@@ -21,14 +21,29 @@
 - (instancetype)initWith:(id<VKSdkUIDelegate>)controller {
     self = [super init];
     if (self) {
-        self.authState = kFCTAuthenticationStateNonSuccess;
+        self.authState = kFCTAuthenticationNone;
         self.presentationController = controller;
     }
     return self;
 }
 
 - (void)handleButtonAuthorizePressed:(id)sender {
-    [self doVkRegister];
+    if (self.authState != kFCTAuthenticationStateInProcess) {
+        [self doVkRegister];
+    }
+}
+
+- (void)tryToWakeUpVkSession {
+    if (self.authState != kFCTAuthenticationStateInProcess) {
+        self.authState = kFCTAuthenticationStateInProcess;
+        [self sendAuthChangedNotification];
+        weakify
+        [[FCTVKDispatcher shared] lastSessionIsActiveWithCallbackBlock:^(BOOL sessionIsActive) {
+            strongify
+            self.authState = sessionIsActive ? kFCTAuthenticationStateSuccess : kFCTAuthenticationNone;
+            [self sendAuthChangedNotification];
+        }];
+    }
 }
 
 - (void)doVkRegister {
