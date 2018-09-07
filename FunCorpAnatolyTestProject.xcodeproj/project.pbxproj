@@ -21,6 +21,8 @@
 		D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E511452142ACC7004D4B3C /* FCTAuthenticationModel.m */; };
 		D8E5114B2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */; };
 		D8E511502142C379004D4B3C /* FCTPhotosFeedRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */; };
+		D8E5115C2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5115B2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m */; };
+		D8E5115F2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5115E2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,10 @@
 		D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedPageViewController.m; sourceTree = "<group>"; };
 		D8E5114E2142C379004D4B3C /* FCTPhotosFeedRootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedRootView.h; sourceTree = "<group>"; };
 		D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedRootView.m; sourceTree = "<group>"; };
+		D8E5115A2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedPresenterModel.h; sourceTree = "<group>"; };
+		D8E5115B2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedPresenterModel.m; sourceTree = "<group>"; };
+		D8E5115D2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTPhotosFeedItemViewController.h; sourceTree = "<group>"; };
+		D8E5115E2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTPhotosFeedItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 		D8E511482142C2A3004D4B3C /* PhotosFeed */ = {
 			isa = PBXGroup;
 			children = (
+				D8E511592142CE25004D4B3C /* Models */,
 				D8E5114D2142C35C004D4B3C /* Views */,
 				D8E5114C2142C349004D4B3C /* Controller */,
 			);
@@ -217,6 +224,8 @@
 			children = (
 				D8E511492142C2DE004D4B3C /* FCTPhotosFeedPageViewController.h */,
 				D8E5114A2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m */,
+				D8E5115D2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.h */,
+				D8E5115E2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +237,15 @@
 				D8E5114F2142C379004D4B3C /* FCTPhotosFeedRootView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D8E511592142CE25004D4B3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8E5115A2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.h */,
+				D8E5115B2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +363,9 @@
 			files = (
 				D8E5114B2142C2DE004D4B3C /* FCTPhotosFeedPageViewController.m in Sources */,
 				D8E511502142C379004D4B3C /* FCTPhotosFeedRootView.m in Sources */,
+				D8E5115C2142CE50004D4B3C /* FCTPhotosFeedPresenterModel.m in Sources */,
 				D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */,
+				D8E5115F2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m in Sources */,
 				D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */,
 				6E332E3D2141C02D00785178 /* ViewController.m in Sources */,
 				D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */,

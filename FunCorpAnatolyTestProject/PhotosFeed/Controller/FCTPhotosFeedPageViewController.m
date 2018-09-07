@@ -9,8 +9,11 @@
 #import "FCTPhotosFeedPageViewController.h"
 #import "ConstantColors.h"
 #import "FCTVKDispatcher.h"
+#import "FCTPhotosFeedPresenterModel.h"
 
 @interface FCTPhotosFeedPageViewController ()
+
+@property (strong, nonatomic, nonnull) FCTPhotosFeedPresenterModel* feedModel;
 
 @end
 
@@ -26,6 +29,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     [self setupNavigationBar];
+    
+    self.feedModel = [[FCTPhotosFeedPresenterModel alloc] init];
+    self.delegate = self.feedModel;
+    self.dataSource = self.feedModel;
 }
 
 - (void)setupNavigationBar {
@@ -43,5 +50,7 @@
     [[FCTVKDispatcher shared] logout];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 
 @end
