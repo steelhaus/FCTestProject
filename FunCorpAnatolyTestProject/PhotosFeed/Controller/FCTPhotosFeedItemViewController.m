@@ -32,7 +32,8 @@
     [super viewDidLoad];
     if ([self.feed isMemberOfClass:[FCTVkFeed class]]) {
         FCTVkFeed *vkFeed = (FCTVkFeed *)self.feed;
-        [self.mainView setVkUrl:[vkFeed.vkPhoto bestPhoto]];
+        [self.mainView setAdUrl:[vkFeed.vkPhoto bestPhoto]];
+//        [self.mainView setVkUrl:[vkFeed.vkPhoto bestPhoto]];
     }
 }
 

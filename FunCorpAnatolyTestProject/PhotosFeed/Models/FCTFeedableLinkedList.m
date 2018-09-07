@@ -91,4 +91,20 @@
     return self._count;
 }
 
+- (FCTFeedable * _Nullable)getFeedAtIndex:(NSInteger)index {
+    if (index < 0) {
+        return self._firstNode;
+    } else if (index >= self._count) {
+        return self._lastNode;
+    }
+    
+    FCTFeedable *currentFeed = self._firstNode;
+    NSInteger iterator = 0;
+    while (currentFeed.nextFeed && iterator < index) {
+        currentFeed = currentFeed.nextFeed;
+    }
+    
+    return currentFeed;
+}
+
 @end

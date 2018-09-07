@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCTPhotosFeedItemRootView : UIView
+@interface FCTPhotosFeedItemRootView : UIView <UIWebViewDelegate>
 
 - (void)setVkUrl:(NSURL *_Nullable)url;
 - (void)setAdUrl:(NSURL *_Nullable)url;

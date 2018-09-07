@@ -19,5 +19,6 @@
 - (FCTFeedable * _Nullable)firstFeed;
 - (FCTFeedable * _Nullable)lastFeed;
 - (NSInteger)count;
+- (FCTFeedable * _Nullable)getFeedAtIndex:(NSInteger)index;
 
 @end

@@ -9,11 +9,18 @@
 #import "FCTPhotosFeedItemRootView.h"
 #import <Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ConstantColors.h"
 
 @interface FCTPhotosFeedItemRootView()
 
 @property (strong, nonatomic) UIImageView *feedImageView;
+
+@property (strong, nonatomic) UIView *webViewContainer;
 @property (strong, nonatomic) UIWebView *feedWebView;
+@property (strong, nonatomic) UIView *webViewAdInformationView;
+@property (strong, nonatomic) UIImageView *webViewAdInformationImageView;
+@property (strong, nonatomic) UILabel *webViewAdInformationLabel;
+
 @property (strong, nonatomic) UIActivityIndicatorView *indicatorView;
 
 @end
@@ -46,11 +53,44 @@
         make.edges.equalTo(self);
     }];
     
+    self.webViewContainer = [UIView new];
+    [self.webViewContainer setHidden:YES];
+    [self addSubview:self.webViewContainer];
+    [self.webViewContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.layoutGuides);
+    }];
+    
     self.feedWebView = [[UIWebView alloc] init];
-    [self.feedWebView setHidden:YES];
-    [self addSubview: self.feedWebView];
+    [self.webViewContainer addSubview: self.feedWebView];
     [self.feedWebView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.edges.equalTo(self.webViewContainer);
+    }];
+    
+    self.webViewAdInformationView = [UIView new];
+    self.webViewAdInformationView.backgroundColor = kColorDarkBanner;
+    [self.webViewContainer addSubview:self.webViewAdInformationView];
+    [self.webViewAdInformationView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.equalTo(self.webViewAdInformationView);
+        make.height.equalTo(@44);
+    }];
+    
+    self.webViewAdInformationImageView = [UIImageView new];
+    self.webViewAdInformationImageView.image = [UIImage imageNamed:@"warningIcon"];
+    [self.webViewAdInformationView addSubview:self.webViewAdInformationImageView];
+    [self.webViewAdInformationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.webViewAdInformationView.mas_left).offset(32);
+        make.centerY.equalTo(self.webViewAdInformationView);
+        make.size.equalTo(@20);
+    }];
+    
+    self.webViewAdInformationLabel = [UILabel new];
+    self.webViewAdInformationLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.webViewAdInformationLabel.text = NSLocalizedString(@"ad_alarm", nil);
+    self.webViewAdInformationLabel.textColor = kColorWhite;
+    [self.webViewAdInformationView addSubview:self.webViewAdInformationLabel];
+    [self.webViewAdInformationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.webViewAdInformationImageView.mas_right).offset(16);
+        make.centerY.equalTo(self.webViewAdInformationView);
     }];
     
     self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -63,7 +103,7 @@
 }
 
 - (void)setVkUrl:(NSURL *_Nullable)url {
-    [self.feedWebView setHidden:YES];
+    [self.webViewContainer setHidden:YES];
     if (url) {
         [self.feedImageView setHidden:NO];
         [self.indicatorView startAnimating];
@@ -80,10 +120,22 @@
 - (void)setAdUrl:(NSURL *_Nullable)url {
     [self.feedImageView setHidden:YES];
     if (url) {
-        [self.feedWebView setHidden:NO];
+        [self.webViewContainer setHidden:NO];
+        [self.indicatorView startAnimating];
+        self.feedWebView.delegate = self;
+        [self.feedWebView loadRequest:[NSURLRequest requestWithURL:url]];
     } else {
-        [self.feedWebView setHidden:YES];
+        [self.webViewContainer setHidden:YES];
     }
+}
+
+#pragma mark WebView protocol
+- (void) webViewDidFinishLoad:(UIWebView *)webView {
+    [self.indicatorView stopAnimating];
+}
+
+- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    [self.indicatorView stopAnimating];
 }
 
 

@@ -19,10 +19,13 @@
 @property (strong, nonatomic) FCTFeedableLinkedList *feedItemsList;
 @property (strong, nonatomic) FCTFeedService* feedService;
 @property (nonatomic) BOOL needUpdatePageVcOnFetchComplete;
+@property (strong, nonatomic) NSTimer *adTimer;
 
 @end
 
 @implementation FCTPhotosFeedPresenterModel
+
+static NSTimeInterval advertisementRepeatInterval = 20;
 
 - (instancetype)initWith:(UIPageViewController *)pageViewController {
     self = [super init];
@@ -34,6 +37,8 @@
         
         self.needUpdatePageVcOnFetchComplete = YES;
         self.feedItemsList = [[FCTFeedableLinkedList alloc] init];
+        
+        self.adTimer = [NSTimer scheduledTimerWithTimeInterval:advertisementRepeatInterval target:self selector:@selector(itIsAdvertisementTime) userInfo:nil repeats:YES];
         
         self.feedService = [[FCTFeedService alloc] init];
         [self fetchPhotos];
@@ -77,7 +82,6 @@
 
 #pragma mark PageViewController Protocols
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSLog(@"DEBUG Get next VC");
     if ([viewController isKindOfClass:[FCTPhotosFeedItemViewController class]]) {
         FCTFeedable *currentFeed = ((FCTPhotosFeedItemViewController *)viewController).feed;
         if (currentFeed.nextFeed) {
@@ -98,7 +102,6 @@
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSLog(@"DEBUG Get prev VC");
     if ([viewController isKindOfClass:[FCTPhotosFeedItemViewController class]]) {
         FCTFeedable *currentFeed = ((FCTPhotosFeedItemViewController *)viewController).feed;
         if (currentFeed.prevFeed) {
@@ -113,6 +116,18 @@
     }
     
     return nil;
+}
+
+- (void)itIsAdvertisementTime {
+//    crand
+//    [self.feedItemsList ]
+//    [self.feedItemsList insertFeedAsLast:<#(FCTFeedable * _Nonnull)#>]
+//    [photos enumerateObjectsUsingBlock:^(VKPhoto * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        FCTVkFeed *newVkFeed = [[FCTVkFeed alloc] init];
+//        newVkFeed.vkPhoto = obj;
+//        [self.feedItemsList insertFeedAsLast:newVkFeed];
+//    }];
+//    [self reloadPageControllerIfNeeded];
 }
 
 @end
