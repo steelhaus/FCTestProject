@@ -13,9 +13,16 @@
 		6E332E422141C02D00785178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E332E412141C02D00785178 /* Assets.xcassets */; };
 		6E332E452141C02D00785178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E332E432141C02D00785178 /* LaunchScreen.storyboard */; };
 		6E332E482141C02D00785178 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E332E472141C02D00785178 /* main.m */; };
+		6E332E542141C2F100785178 /* FCTVKDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E332E532141C2F100785178 /* FCTVKDispatcher.m */; };
+		9D72B0D4FE3AABF9BD6C2DA9 /* libPods-FunCorpAnatolyTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BAEDFED032C5F12AE7B18D /* libPods-FunCorpAnatolyTestProject.a */; };
+		D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5112B214288E4004D4B3C /* FCTNavigationController.m */; };
+		D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E51130214289B8004D4B3C /* FCTAuthViewController.m */; };
+		D8E51135214289EA004D4B3C /* FCTAuthRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E51134214289EA004D4B3C /* FCTAuthRootView.m */; };
+		D8E511392142A7BE004D4B3C /* ConstantColors.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E511382142A7BE004D4B3C /* ConstantColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48BAEDFED032C5F12AE7B18D /* libPods-FunCorpAnatolyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunCorpAnatolyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E332E352141C02D00785178 /* FunCorpAnatolyTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunCorpAnatolyTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E332E382141C02D00785178 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E332E392141C02D00785178 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +33,21 @@
 		6E332E442141C02D00785178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E332E462141C02D00785178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E332E472141C02D00785178 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E332E522141C2F100785178 /* FCTVKDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTVKDispatcher.h; sourceTree = "<group>"; };
+		6E332E532141C2F100785178 /* FCTVKDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTVKDispatcher.m; sourceTree = "<group>"; };
+		6E332E552141C51C00785178 /* AppKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppKeys.h; sourceTree = "<group>"; };
+		6E332E562141C5C200785178 /* FunCorpAnatolyTestProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunCorpAnatolyTestProject-Prefix.pch"; sourceTree = "<group>"; };
+		6E332E572141E00700785178 /* WeakStrongMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakStrongMacro.h; sourceTree = "<group>"; };
+		C48B71149F9DE4B784BAD4C2 /* Pods-FunCorpAnatolyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunCorpAnatolyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		D54345C2D3D70D44E58D8F56 /* Pods-FunCorpAnatolyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunCorpAnatolyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		D8E5112A214288E4004D4B3C /* FCTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTNavigationController.h; sourceTree = "<group>"; };
+		D8E5112B214288E4004D4B3C /* FCTNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTNavigationController.m; sourceTree = "<group>"; };
+		D8E5112F214289B8004D4B3C /* FCTAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAuthViewController.h; sourceTree = "<group>"; };
+		D8E51130214289B8004D4B3C /* FCTAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTAuthViewController.m; sourceTree = "<group>"; };
+		D8E51133214289EA004D4B3C /* FCTAuthRootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTAuthRootView.h; sourceTree = "<group>"; };
+		D8E51134214289EA004D4B3C /* FCTAuthRootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTAuthRootView.m; sourceTree = "<group>"; };
+		D8E511372142A69E004D4B3C /* ConstantColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantColors.h; sourceTree = "<group>"; };
+		D8E511382142A7BE004D4B3C /* ConstantColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstantColors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D72B0D4FE3AABF9BD6C2DA9 /* libPods-FunCorpAnatolyTestProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5808DB193EF19F9D6C535D47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D54345C2D3D70D44E58D8F56 /* Pods-FunCorpAnatolyTestProject.debug.xcconfig */,
+				C48B71149F9DE4B784BAD4C2 /* Pods-FunCorpAnatolyTestProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E332E2C2141C02D00785178 = {
 			isa = PBXGroup;
 			children = (
 				6E332E372141C02D00785178 /* FunCorpAnatolyTestProject */,
 				6E332E362141C02D00785178 /* Products */,
+				5808DB193EF19F9D6C535D47 /* Pods */,
+				888096D03497300D98C95E36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +92,86 @@
 		6E332E372141C02D00785178 /* FunCorpAnatolyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				D8E511362142A62B004D4B3C /* Constants */,
+				D8E5112D21428981004D4B3C /* Authentication */,
+				D8E51129214288B4004D4B3C /* Navigation */,
+				6E332E512141C25E00785178 /* Social */,
 				6E332E382141C02D00785178 /* AppDelegate.h */,
 				6E332E392141C02D00785178 /* AppDelegate.m */,
 				6E332E3B2141C02D00785178 /* ViewController.h */,
 				6E332E3C2141C02D00785178 /* ViewController.m */,
 				6E332E3E2141C02D00785178 /* Main.storyboard */,
-				6E332E412141C02D00785178 /* Assets.xcassets */,
 				6E332E432141C02D00785178 /* LaunchScreen.storyboard */,
+				6E332E562141C5C200785178 /* FunCorpAnatolyTestProject-Prefix.pch */,
 				6E332E462141C02D00785178 /* Info.plist */,
+				6E332E572141E00700785178 /* WeakStrongMacro.h */,
+				6E332E552141C51C00785178 /* AppKeys.h */,
 				6E332E472141C02D00785178 /* main.m */,
+				6E332E412141C02D00785178 /* Assets.xcassets */,
 			);
 			path = FunCorpAnatolyTestProject;
+			sourceTree = "<group>";
+		};
+		6E332E512141C25E00785178 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				6E332E522141C2F100785178 /* FCTVKDispatcher.h */,
+				6E332E532141C2F100785178 /* FCTVKDispatcher.m */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		888096D03497300D98C95E36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48BAEDFED032C5F12AE7B18D /* libPods-FunCorpAnatolyTestProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8E51129214288B4004D4B3C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D8E5112A214288E4004D4B3C /* FCTNavigationController.h */,
+				D8E5112B214288E4004D4B3C /* FCTNavigationController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D8E5112D21428981004D4B3C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D8E51132214289D8004D4B3C /* Views */,
+				D8E5112E21428994004D4B3C /* Controller */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D8E5112E21428994004D4B3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8E5112F214289B8004D4B3C /* FCTAuthViewController.h */,
+				D8E51130214289B8004D4B3C /* FCTAuthViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8E51132214289D8004D4B3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8E51133214289EA004D4B3C /* FCTAuthRootView.h */,
+				D8E51134214289EA004D4B3C /* FCTAuthRootView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8E511362142A62B004D4B3C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D8E511372142A69E004D4B3C /* ConstantColors.h */,
+				D8E511382142A7BE004D4B3C /* ConstantColors.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E332E4B2141C02D00785178 /* Build configuration list for PBXNativeTarget "FunCorpAnatolyTestProject" */;
 			buildPhases = (
+				3FA53D3A80236B959EB80D70 /* [CP] Check Pods Manifest.lock */,
 				6E332E312141C02D00785178 /* Sources */,
 				6E332E322141C02D00785178 /* Frameworks */,
 				6E332E332141C02D00785178 /* Resources */,
+				1C18F7F681BB251A43377AE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,14 +242,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C18F7F681BB251A43377AE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/VK-ios-sdk/VKSdkResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VKSdkResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FA53D3A80236B959EB80D70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunCorpAnatolyTestProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6E332E312141C02D00785178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */,
 				6E332E3D2141C02D00785178 /* ViewController.m in Sources */,
+				D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */,
+				D8E51135214289EA004D4B3C /* FCTAuthRootView.m in Sources */,
+				6E332E542141C2F100785178 /* FCTVKDispatcher.m in Sources */,
 				6E332E482141C02D00785178 /* main.m in Sources */,
 				6E332E3A2141C02D00785178 /* AppDelegate.m in Sources */,
+				D8E511392142A7BE004D4B3C /* ConstantColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +425,14 @@
 		};
 		6E332E4C2141C02D00785178 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D54345C2D3D70D44E58D8F56 /* Pods-FunCorpAnatolyTestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SXS45M8ELL;
+				GCC_PREFIX_HEADER = "FunCorpAnatolyTestProject/FunCorpAnatolyTestProject-Prefix.pch";
 				INFOPLIST_FILE = FunCorpAnatolyTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.steelhaus.FunCorpAnatolyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +442,14 @@
 		};
 		6E332E4D2141C02D00785178 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48B71149F9DE4B784BAD4C2 /* Pods-FunCorpAnatolyTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SXS45M8ELL;
+				GCC_PREFIX_HEADER = "FunCorpAnatolyTestProject/FunCorpAnatolyTestProject-Prefix.pch";
 				INFOPLIST_FILE = FunCorpAnatolyTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.steelhaus.FunCorpAnatolyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

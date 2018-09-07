@@ -1,0 +1,15 @@
+//
+//  FunCorpAnatolyTestProject-Prefix.pch
+//  FunCorpAnatolyTestProject
+//
+//  Created by Анатолий Карельский on 06.09.18.
+//  Copyright © 2018 steelhaus. All rights reserved.
+//
+
+#ifndef FunCorpAnatolyTestProject_Prefix_pch
+#define FunCorpAnatolyTestProject_Prefix_pch
+
+#import "AppKeys.h"
+#import "WeakStrongMacro.h"
+
+#endif /* FunCorpAnatolyTestProject_Prefix_pch */

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <VKSdk.h>
+#import "FCTNavigationController.h"
+#import "FCTAuthViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,10 +17,43 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)shared {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [self startAppWindow];
+    
+    
+//    static var shared: AppDelegate! { return UIApplication.shared.delegate as! AppDelegate }
+//
+//    var window: UIWindow?
+    
+//    window = UIWindow(frame: UIScreen.main.bounds)
+//    window?.makeKeyAndVisible()
+//    let rootVC = LoginViewController()
+//    window?.rootViewController = MainNavigationController(rootViewController: rootVC)
+    
     return YES;
+}
+
+- (void) startAppWindow {
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    [self.window makeKeyAndVisible];
+    
+    FCTAuthViewController *authVC = [[FCTAuthViewController alloc] init];
+    FCTNavigationController *navVC = [[FCTNavigationController alloc] initWithRootViewController:authVC];
+    self.window.rootViewController = navVC;
+    
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if ([[url scheme] hasPrefix:@"vk"]) {
+        [VKSdk processOpenURL:url fromApplication:UIApplicationOpenURLOptionsSourceApplicationKey];
+        return YES;
+    }
+    return NO;
 }
 
 

@@ -1,0 +1,20 @@
+PODS:
+  - Masonry (1.1.0)
+  - VK-ios-sdk (1.4.6)
+
+DEPENDENCIES:
+  - Masonry
+  - VK-ios-sdk
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - VK-ios-sdk
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
+
+PODFILE CHECKSUM: e8be2736b929931ae9ef136faaf95bbf6c20718d
+
+COCOAPODS: 1.5.3
