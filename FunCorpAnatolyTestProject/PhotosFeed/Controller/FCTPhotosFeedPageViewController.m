@@ -32,7 +32,8 @@
     [super viewWillAppear: animated];
     [self setupNavigationBar];
     
-    
+//    NSURL *url = [[NSURL alloc] initWithString: @"https://www.catster.com/wp-content/uploads/2017/10/A-kitten-meowing-with-his-mouth-open.jpg"];
+//    [self.feedImageView sd_setImageWithURL:url];
 }
 
 - (void)setupNavigationBar {

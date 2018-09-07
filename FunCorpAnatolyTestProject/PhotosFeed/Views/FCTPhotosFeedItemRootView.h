@@ -10,4 +10,7 @@
 
 @interface FCTPhotosFeedItemRootView : UIView
 
+- (void)setVkUrl:(NSURL *_Nullable)url;
+- (void)setAdUrl:(NSURL *_Nullable)url;
+
 @end

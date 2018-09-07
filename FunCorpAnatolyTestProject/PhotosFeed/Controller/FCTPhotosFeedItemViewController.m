@@ -9,6 +9,9 @@
 #import "FCTPhotosFeedItemViewController.h"
 #import "FCTPhotosFeedItemRootView.h"
 #import "ConstantColors.h"
+#import "FCTVkFeed.h"
+#import "FCTAdFeed.h"
+#import "VKPhoto+BestPhoto.h"
 
 @interface FCTPhotosFeedItemViewController ()
 
@@ -27,6 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([self.feed isMemberOfClass:[FCTVkFeed class]]) {
+        FCTVkFeed *vkFeed = (FCTVkFeed *)self.feed;
+        [self.mainView setVkUrl:[vkFeed.vkPhoto bestPhoto]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

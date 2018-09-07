@@ -18,6 +18,7 @@
 		6E8EB51E214306AE007DB203 /* FCTVkFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB51D214306AE007DB203 /* FCTVkFeed.m */; };
 		6E8EB521214306B9007DB203 /* FCTAdFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB520214306B9007DB203 /* FCTAdFeed.m */; };
 		6E8EB5242143191E007DB203 /* FCTFeedableLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB5232143191E007DB203 /* FCTFeedableLinkedList.m */; };
+		6E8EB52921432C1D007DB203 /* VKPhoto+BestPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB52821432C1D007DB203 /* VKPhoto+BestPhoto.m */; };
 		9D72B0D4FE3AABF9BD6C2DA9 /* libPods-FunCorpAnatolyTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BAEDFED032C5F12AE7B18D /* libPods-FunCorpAnatolyTestProject.a */; };
 		D8E5112C214288E4004D4B3C /* FCTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E5112B214288E4004D4B3C /* FCTNavigationController.m */; };
 		D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E51130214289B8004D4B3C /* FCTAuthViewController.m */; };
@@ -56,6 +57,8 @@
 		6E8EB520214306B9007DB203 /* FCTAdFeed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTAdFeed.m; sourceTree = "<group>"; };
 		6E8EB5222143191E007DB203 /* FCTFeedableLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTFeedableLinkedList.h; sourceTree = "<group>"; };
 		6E8EB5232143191E007DB203 /* FCTFeedableLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTFeedableLinkedList.m; sourceTree = "<group>"; };
+		6E8EB52721432C1D007DB203 /* VKPhoto+BestPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKPhoto+BestPhoto.h"; sourceTree = "<group>"; };
+		6E8EB52821432C1D007DB203 /* VKPhoto+BestPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "VKPhoto+BestPhoto.m"; sourceTree = "<group>"; };
 		C48B71149F9DE4B784BAD4C2 /* Pods-FunCorpAnatolyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunCorpAnatolyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		D54345C2D3D70D44E58D8F56 /* Pods-FunCorpAnatolyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunCorpAnatolyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunCorpAnatolyTestProject/Pods-FunCorpAnatolyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E5112A214288E4004D4B3C /* FCTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTNavigationController.h; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		6E332E372141C02D00785178 /* FunCorpAnatolyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				6E8EB52621432BD9007DB203 /* Category */,
 				D8E511482142C2A3004D4B3C /* PhotosFeed */,
 				D8E511362142A62B004D4B3C /* Constants */,
 				D8E5112D21428981004D4B3C /* Authentication */,
@@ -151,6 +155,15 @@
 				6E332E532141C2F100785178 /* FCTVKDispatcher.m */,
 			);
 			path = Social;
+			sourceTree = "<group>";
+		};
+		6E8EB52621432BD9007DB203 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EB52721432C1D007DB203 /* VKPhoto+BestPhoto.h */,
+				6E8EB52821432C1D007DB203 /* VKPhoto+BestPhoto.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		888096D03497300D98C95E36 /* Frameworks */ = {
@@ -392,6 +405,7 @@
 				D8E51131214289B8004D4B3C /* FCTAuthViewController.m in Sources */,
 				6E8EB51E214306AE007DB203 /* FCTVkFeed.m in Sources */,
 				D8E5115F2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m in Sources */,
+				6E8EB52921432C1D007DB203 /* VKPhoto+BestPhoto.m in Sources */,
 				D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */,
 				6E332E3D2141C02D00785178 /* ViewController.m in Sources */,
 				6E8EB5182142F6D3007DB203 /* FCTFeedService.m in Sources */,
