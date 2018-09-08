@@ -110,6 +110,7 @@
     if (url) {
         [self.feedImageView setHidden:NO];
         [self.indicatorView startAnimating];
+        self.indicatorView.color = UIColor.whiteColor;
         weakify
         [self.feedImageView sd_setImageWithURL:url
                                      completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
@@ -125,8 +126,12 @@
     if (url) {
         [self.webViewContainer setHidden:NO];
         [self.indicatorView startAnimating];
+        self.indicatorView.color = UIColor.grayColor;
         self.feedWebView.delegate = self;
-        [self.feedWebView loadRequest:[NSURLRequest requestWithURL:url]];
+        self.feedWebView.scalesPageToFit = YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.feedWebView loadRequest:[NSURLRequest requestWithURL:url]];
+        });
     } else {
         [self.webViewContainer setHidden:YES];
     }

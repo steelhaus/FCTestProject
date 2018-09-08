@@ -35,6 +35,7 @@
         newFeed.nextFeed = existingFeed.nextFeed;
         existingFeed.nextFeed.prevFeed = newFeed;
         existingFeed.nextFeed = newFeed;
+        newFeed.prevFeed = existingFeed;
     } else {
         existingFeed.nextFeed = newFeed;
         newFeed.prevFeed = existingFeed;
@@ -48,6 +49,7 @@
         newFeed.prevFeed = existingFeed.prevFeed;
         existingFeed.prevFeed.nextFeed = newFeed;
         existingFeed.prevFeed = newFeed;
+        newFeed.nextFeed = existingFeed;
     } else {
         existingFeed.prevFeed = newFeed;
         newFeed.nextFeed = existingFeed;
