@@ -102,6 +102,7 @@
     NSInteger iterator = 0;
     while (currentFeed.nextFeed && iterator < index) {
         currentFeed = currentFeed.nextFeed;
+        iterator += 1;
     }
     
     return currentFeed;

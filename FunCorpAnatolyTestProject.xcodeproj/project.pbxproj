@@ -13,6 +13,7 @@
 		6E332E452141C02D00785178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E332E432141C02D00785178 /* LaunchScreen.storyboard */; };
 		6E332E482141C02D00785178 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E332E472141C02D00785178 /* main.m */; };
 		6E332E542141C2F100785178 /* FCTVKDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E332E532141C2F100785178 /* FCTVKDispatcher.m */; };
+		6E4A3C4A214353FF00080DDF /* FCTUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4A3C49214353FF00080DDF /* FCTUrls.m */; };
 		6E8EB5182142F6D3007DB203 /* FCTFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB5172142F6D3007DB203 /* FCTFeedService.m */; };
 		6E8EB51B21430696007DB203 /* FCTFeedable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB51A21430696007DB203 /* FCTFeedable.m */; };
 		6E8EB51E214306AE007DB203 /* FCTVkFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EB51D214306AE007DB203 /* FCTVkFeed.m */; };
@@ -47,6 +48,8 @@
 		6E332E552141C51C00785178 /* AppKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppKeys.h; sourceTree = "<group>"; };
 		6E332E562141C5C200785178 /* FunCorpAnatolyTestProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunCorpAnatolyTestProject-Prefix.pch"; sourceTree = "<group>"; };
 		6E332E572141E00700785178 /* WeakStrongMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakStrongMacro.h; sourceTree = "<group>"; };
+		6E4A3C48214353FF00080DDF /* FCTUrls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTUrls.h; sourceTree = "<group>"; };
+		6E4A3C49214353FF00080DDF /* FCTUrls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTUrls.m; sourceTree = "<group>"; };
 		6E8EB5162142F6D3007DB203 /* FCTFeedService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTFeedService.h; sourceTree = "<group>"; };
 		6E8EB5172142F6D3007DB203 /* FCTFeedService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCTFeedService.m; sourceTree = "<group>"; };
 		6E8EB51921430696007DB203 /* FCTFeedable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCTFeedable.h; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				D8E511372142A69E004D4B3C /* ConstantColors.h */,
+				6E4A3C48214353FF00080DDF /* FCTUrls.h */,
+				6E4A3C49214353FF00080DDF /* FCTUrls.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				6E8EB51E214306AE007DB203 /* FCTVkFeed.m in Sources */,
 				D8E5115F2142CF5D004D4B3C /* FCTPhotosFeedItemViewController.m in Sources */,
 				6E8EB52921432C1D007DB203 /* VKPhoto+BestPhoto.m in Sources */,
+				6E4A3C4A214353FF00080DDF /* FCTUrls.m in Sources */,
 				D8E511462142ACC7004D4B3C /* FCTAuthenticationModel.m in Sources */,
 				6E332E3D2141C02D00785178 /* ViewController.m in Sources */,
 				6E8EB5182142F6D3007DB203 /* FCTFeedService.m in Sources */,

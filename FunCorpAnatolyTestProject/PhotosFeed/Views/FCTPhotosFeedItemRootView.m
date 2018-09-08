@@ -57,7 +57,7 @@
     [self.webViewContainer setHidden:YES];
     [self addSubview:self.webViewContainer];
     [self.webViewContainer mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.layoutGuides);
+        make.edges.equalTo(self);
     }];
     
     self.feedWebView = [[UIWebView alloc] init];
@@ -70,12 +70,15 @@
     self.webViewAdInformationView.backgroundColor = kColorDarkBanner;
     [self.webViewContainer addSubview:self.webViewAdInformationView];
     [self.webViewAdInformationView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.right.equalTo(self.webViewAdInformationView);
+        make.left.equalTo(self.webViewContainer.mas_left);
+        make.right.equalTo(self.webViewContainer.mas_right);
+        make.bottom.equalTo(self.webViewContainer.mas_bottom);
         make.height.equalTo(@44);
     }];
     
     self.webViewAdInformationImageView = [UIImageView new];
-    self.webViewAdInformationImageView.image = [UIImage imageNamed:@"warningIcon"];
+    self.webViewAdInformationImageView.image = [[UIImage imageNamed:@"warning_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.webViewAdInformationImageView.tintColor = UIColor.redColor;
     [self.webViewAdInformationView addSubview:self.webViewAdInformationImageView];
     [self.webViewAdInformationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.webViewAdInformationView.mas_left).offset(32);

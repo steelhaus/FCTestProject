@@ -13,6 +13,7 @@
 #import "FCTVkFeed.h"
 #import "FCTAdFeed.h"
 #import "FCTFeedableLinkedList.h"
+#import "FCTUrls.h"
 
 @interface FCTPhotosFeedPresenterModel()
 
@@ -87,7 +88,6 @@ static NSTimeInterval advertisementRepeatInterval = 20;
         if (currentFeed.nextFeed) {
             FCTPhotosFeedItemViewController *nextVC = [[FCTPhotosFeedItemViewController alloc] init];
             nextVC.feed = currentFeed.nextFeed;
-            self.needUpdatePageVcOnFetchComplete = NO;
             return nextVC;
         } else {
             self.needUpdatePageVcOnFetchComplete = YES;
@@ -107,7 +107,6 @@ static NSTimeInterval advertisementRepeatInterval = 20;
         if (currentFeed.prevFeed) {
             FCTPhotosFeedItemViewController *prevVC = [[FCTPhotosFeedItemViewController alloc] init];
             prevVC.feed = currentFeed.prevFeed;
-            self.needUpdatePageVcOnFetchComplete = NO;
             return prevVC;
         } else {
             self.needUpdatePageVcOnFetchComplete = YES;
@@ -118,16 +117,28 @@ static NSTimeInterval advertisementRepeatInterval = 20;
     return nil;
 }
 
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
+    if (completed) {
+        self.needUpdatePageVcOnFetchComplete = NO;
+    }
+}
+
 - (void)itIsAdvertisementTime {
-//    crand
-//    [self.feedItemsList ]
-//    [self.feedItemsList insertFeedAsLast:<#(FCTFeedable * _Nonnull)#>]
-//    [photos enumerateObjectsUsingBlock:^(VKPhoto * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        FCTVkFeed *newVkFeed = [[FCTVkFeed alloc] init];
-//        newVkFeed.vkPhoto = obj;
-//        [self.feedItemsList insertFeedAsLast:newVkFeed];
-//    }];
-//    [self reloadPageControllerIfNeeded];
+    FCTAdFeed *adFeed = [[FCTAdFeed alloc] init];
+    adFeed.adUrl = [[[FCTUrls alloc] init] getRandomUrl];
+    
+    NSInteger feedCount = self.feedItemsList.count;
+    int index = arc4random() % (feedCount + 1);
+    if (index == 0) {
+        [self.feedItemsList insertFeedAsFirst:adFeed];
+    } else if (index >= feedCount) {
+        [self.feedItemsList insertFeedAsLast:adFeed];
+    } else {
+        FCTFeedable *prevFeed = [self.feedItemsList getFeedAtIndex:(index - 1)];
+        [self.feedItemsList insertFeed:adFeed after:prevFeed];
+    }
+    
+    [self reloadPageControllerIfNeeded];
 }
 
 @end

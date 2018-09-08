@@ -22,18 +22,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     [self startAppWindow];
-    
-    
-//    static var shared: AppDelegate! { return UIApplication.shared.delegate as! AppDelegate }
-//
-//    var window: UIWindow?
-    
-//    window = UIWindow(frame: UIScreen.main.bounds)
-//    window?.makeKeyAndVisible()
-//    let rootVC = LoginViewController()
-//    window?.rootViewController = MainNavigationController(rootViewController: rootVC)
     
     return YES;
 }
